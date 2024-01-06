@@ -1,0 +1,701 @@
+*{
+    margin: 0;
+    padding: '0';
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    background-color: rgb(1, 1, 12);
+    color: white;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Courier New', Courier, monospace;
+}
+p, ul{
+    font-family: 'Courier New', Courier, monospace;
+}
+a{
+    font-family: 'Courier New', Courier, monospace;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: black;
+    color:orangered;
+    align-items: center;
+}
+.logo h1{
+    color: white;
+}
+.logo span{
+    color: orangered;
+}
+.logo a{
+    text-decoration: none;
+}
+label{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.menu ul{
+    list-style-type: none;
+}
+.menu a:hover{
+    color:white;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.menu{
+    transform: translateX(100%);
+    position: fixed;
+    min-height: 100vh;
+    width:50%;
+    right: 0;
+    transform-origin: left;
+    transition: all 350ms ease-in-out; 
+    z-index: 10;
+    top: 20;
+    padding: 30px;
+}
+#check:checked ~ .open {
+    display: none;
+}
+#check:checked ~ .close {
+    display: block;
+    position: relative;
+    z-index: 1; 
+}
+#check{
+    display: none;
+}
+.close{
+    display: none;
+}
+.menu a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: orangered;
+}
+li{
+    /* padding-left: 10px;
+    padding: 30px; */
+    font-size: 22px;
+    line-height: 60px;
+}
+.menu li:hover{
+    cursor: pointer;
+}
+.menu h1{
+    color: grey;
+    font-size: 35px;
+}
+.menu label{
+    padding: 10px;
+}
+#check:checked ~ .menu {
+    transform: rotateX(0);
+    right: 0;
+    background-color:rgb(15, 15, 15);
+    text-align: left;
+    line-height: 40px;
+}
+#check:checked ~ .open {
+    display: none;
+}
+#check:checked ~ .close {
+    display: block;
+    position: relative;
+    z-index: 1;   
+}
+#check{
+    display: none;
+}
+svg{
+    fill: white;
+}
+.hero{
+    background-image: linear-gradient(to right bottom, rgba(0,0,0,0.4), rgba(0, 0, 7, 0.8)), url(/pexels-tima-miroshnichenko-6694543.jpg);
+    height: 87vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero-text{
+    position: absolute;
+    bottom: 200px;
+}
+.hero-text h2{
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+}
+.hero-text span{
+    color: orangered;
+}
+.hero-text p{
+    text-align: center;
+    color: orangered;
+    text-transform: capitalize;
+    font-size: 30px;
+}
+.about{
+    margin-top: 150px;
+}
+.about h2{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 35px;
+}
+.bb{
+    border-bottom: 5px solid orangered;
+    width: 50px;
+    margin: auto;
+}
+.about-img img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+.about-img{
+    margin-top: 30px;
+}
+.about-text{
+    margin: 50px;
+    color: white;
+    padding-top: 50px;
+}
+.about-text h3{
+    font-size: 25px;
+    text-transform: capitalize;
+}
+.about-text h5{
+    font-size: 20px;
+    text-transform: capitalize;
+    color: orangered;
+    margin-bottom: 10px;
+}
+.about p{
+    font-size: 18px;
+}
+.about-button button{
+    color: white;
+    background-color: orangered;
+    border: 2px solid orangered;
+    margin-top: 10px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.about-button a{
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.about-button a:hover{
+    color: orangered;
+}
+.about-button button:hover{
+    background-color: white;
+    border: 2px solid white;
+}
+.outline h2{
+    color: white;
+    text-align: center;
+    margin-top: 150px;
+    font-size: 35px;
+}
+.left img{
+    width: 85%;
+    border-radius: 50%;
+    height: 300px;
+    margin: 30px;
+}
+.right{
+    margin-top: 50px;
+    color: white;
+    margin: 50px;
+}
+.right h2{
+    text-transform: capitalize;
+}
+.right p{
+    margin: 20px;
+    font-size: 20px;
+    padding-left: 15px;
+}
+.right p:hover{
+    border-top: 2px solid orangered;
+    border-left: 2px solid orangered;
+}
+.right-button{
+    flex-direction: column;
+    display: flex;
+    gap: 11px;
+    justify-content: space-between;
+}
+.right-button-text{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.right-button-text svg{
+    border: 3px solid orangered;
+    padding: 5px;
+    border-radius: 15px;
+}
+.right-button-text h5{
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.tech{
+    margin-top: 150px;
+}
+.tech h3{
+    color: white;
+    text-transform: capitalize;
+    font-size: 30px;
+    text-align: center;
+}
+.middle{
+    text-align: center;
+    margin: 50px;
+    color: white;
+    padding: 20px;
+    height: 250px;
+    background: rgba(0, 0, 0, 0.3);
+    margin-bottom: 3rem;
+    border-radius: 5px;
+    box-shadow: 0 1.5rem 4rem rgba(3, 37, 37, .5);
+    transition: .5s ease-in-out;
+    text-align: center;
+    color: orangered;
+    padding: 30px;
+}
+.middle p{
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+.middle h5{
+    -webkit-text-fill-color: rgb(235, 229, 229);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 0.5px rgb(248, 236, 236);
+    font-size: 80px;
+
+}
+.middle h5:hover{
+    -webkit-text-fill-color: orangered;
+    -webkit-text-stroke: 0.5px orangered;
+}
+.middle:hover{
+    box-shadow: 5px 5px 5px 5px orangered;
+}
+.third{
+    margin: 50px;
+}
+.third h3{
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin-top: 150px;
+}
+.two h3{
+    background-color: rgb(5, 5, 56);
+    color: orangered;
+    border: 2px solid rgb(5, 5, 56);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-size: 25px;
+    padding: 35px;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.two h4, .two p{
+    color:white;
+    text-align: center;
+}
+.two h4{
+    margin-top: 20px;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+.two p{
+    margin-top: 5px;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+.safe{
+    margin: 50px;
+    margin-top: 100px;
+}
+.in{
+    margin-bottom: 40px;
+    position: relative;
+}
+/* .in-text{
+    display: none;
+} */
+.in img{
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+}
+.in h3{
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    color: white;
+    font-size: 25px;
+}
+.text:hover{
+    transition: .5s ease-in-out;
+    background-color: rgb(4, 4, 37);
+    color: orangered;
+}
+.text button{
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    text-transform: capitalize;
+    padding: 10px;
+    border: 2px solid orangered;
+}
+.out h3{
+    font-size: 23px;
+}
+.out ul{
+    text-transform: capitalize;
+}
+.out button{
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    text-transform: capitalize;
+    padding: 10px;
+    border: 2px solid orangered;
+}
+.text{
+    transition: transform 0.5s ease-in;
+    position: absolute;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.733);
+}
+.challenge{
+    margin: 50px;
+}
+.image img{
+    width: 50%;
+    height: 150px;
+    margin: auto;
+    object-fit: cover;
+}
+.image img{
+    margin-bottom: 20px;
+}
+.security{
+    margin-bottom: 10px;
+    height: 330px;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 1.5rem 4rem rgba(3, 37, 37, .5);
+}
+.security:hover{
+    transition: .5s ease-in-out;
+    border: 5px solid orangered;
+}
+.security h4{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.security p{
+    font-size: 18px;
+}
+.details{
+    /* background-color: rgba(0, 0, 0, 0.918); */
+    width: 70%;
+    height: 70vh;
+}
+.last{
+    background-image: url(./pexels-ivan-babydov-7788009.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.top{
+    float: left;
+    flex-direction: column;
+    padding-left: 50px;
+    /* margin-left: 15px; */
+} 
+.top h2{
+    text-transform: capitalize;
+    font-size: 21px;
+    margin-top: 30px;
+}
+.input{
+   margin-top: 2rem;
+}
+input{
+   border-radius: 5px;
+   background: transparent;
+   color: orangered;
+   padding: 7px;
+}  
+::placeholder{
+    padding: 10px;
+}
+textarea{
+    border-radius: 5px;
+    background: transparent;
+    color: orangered;
+    padding: 10px;
+}
+#fname,#email,#sub{
+   width: 100%;
+   height: 6vh;
+   border: 2px solid gray;
+   box-shadow: 2px 2px 5px black;
+}
+.top button{
+    background-color: orangered ;
+    border: 2px solid orangered;
+    padding: 10px;
+    margin-top: 20px;
+}
+.top a{
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+}
+.ll{
+    margin: 50px;
+}
+.ll h3{
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-size: 22px;
+    margin-top: 150px;
+}
+.gg{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+.gg svg{
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 10px;
+}
+.gg svg:hover{
+    background-color: orangered;
+    border: 2px solid orangered;
+}
+.gg-text h4{
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+.gg-text h5{
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+.gg-text p{
+    text-transform: lowercase;
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.pp{
+    text-transform: lowercase;
+}
+@media screen and (min-width: 768px) {
+    .menu{
+        transform: translateX(0);
+        position: unset ;
+        transition: none;
+        min-height: 2px;
+        gap: 5px;
+        /* margin-top: 15px; */
+    }
+    ul{
+        gap: 25px;
+    }
+    .menu a:hover{
+        border: unset;
+        background-color: unset;
+        cursor: pointer;
+        color: orangered;
+    }
+    .logo img{
+        width: 100px;
+        object-fit: cover;
+    }
+    .menu a{
+        color: white;
+        text-decoration: none;
+        text-transform: capitalize;
+    }
+    /* .menu a:hover{
+        color: green;
+    } */
+    .open{ 
+        display: none;
+    }
+    .close{
+        display: none;
+    }
+    /* header{
+        padding: 20px;
+    } */
+    header{
+        height: 70px;
+    }
+    header ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .hero-text{
+        width: 100%;
+        margin: auto;
+        top: 200px;
+    }
+    .about_section{
+        display: flex;
+        justify-content: space-between;
+        margin: 100px;
+    }
+    .about-img{
+        width: 50%;
+    }
+    .about-text{
+        width: 50%;
+        line-height: 30px;
+    }
+    .about-text h3{
+        font-size: 30px;
+    }
+   .achieve{
+        margin-top: 300px;
+        margin: 130px;
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+   }
+   .tech{
+        margin-top: 300px;
+   }
+   .right{
+        width: 50%;
+        margin: unset;
+        padding-top: 100px;
+   }
+   .left{
+        width: 40%;
+        margin-top: 100px;
+   }
+   .left img{
+        height: 250px;
+        width: 250px;
+   }
+   .solutions{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        gap: 10px;
+   }
+   .third{
+        margin-top: 300px;
+   }
+    .middle{
+        width: 50%;
+        height: 250px;
+    }
+    .one{
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+    }
+    .two h3{
+        margin-left: 100px;
+        align-items: center;
+    }
+    .safe{
+        margin-top: 300px;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .in, .out{
+        width: 100%;
+    }
+    .in img{
+        height: 400px;
+    }
+    .challenge{
+        margin-top: 300px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .last{
+        display: flex;
+        padding: 50px;
+        margin-top: 300px;
+    }
+    .ll h3{
+        margin: unset;
+    }
+    .gg{
+        margin-top: 20px;
+    }
+    .right-button{
+        flex-direction: row;
+    }
+    /* .two .ng{
+        margin-right: -400px;
+    } */
+}
+@media screen and (min-width: 1024px) {
+    .solutions{
+        display: flex;
+        justify-content: space-between;
+    }
+    .one{
+        display: flex;
+        justify-content: space-between;
+    }
+    .two h3{
+        margin-left: 30px;
+    }
+    .safe{
+        display: flex;
+        justify-content: space-between;
+    }
+    .left{
+        margin-top: unset;
+       
+    }    
+    .left img{
+        width: 400px;
+        height: 400px;
+    }
+}
